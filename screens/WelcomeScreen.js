@@ -18,27 +18,27 @@ export default class WelcomeScreen extends Component {
         return (
             <View style={styles.container}>
                 <SafeAreaView style={styles.droidSafeArea} />
-                <ImageBackground source={require('../assets/travel.gif')} style={styles.backgroundImage}>
+                <ImageBackground source={require('../assets/Sky.gif')} style={styles.backgroundImage}>
                     <View style={styles.titleBar}>
                         <Image source={require("../assets/travelicon.jpg")} style={{ width: 150, height: 150 }}></Image>
                         <Text style={styles.titleText}>World Tour</Text>
                         <Text style={styles.titleText}>App</Text>
                     </View>
 
-                  
+                   
 
                     <TouchableOpacity style={styles.routeCard} onPress={() =>
                         this.props.navigation.navigate("WorldMap")
                     }>
                         <Text style={styles.routeText}>World Map</Text>
-                        <Image source={require("../assets/map.png")} style={styles.routeImage}></Image>
+                        <Image source={require("../assets/Worldmap.png")} style={styles.routeImage}></Image>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.routeCard} onPress={() =>
                         this.props.navigation.navigate("DailySightings")
                     }>
                         <Text style={styles.routeText}>Daily Sightings</Text>
-                        <Image source={require("../assets/daily_pictures.png")} style={styles.routeImage}></Image>
+                        <Image source={require("../assets/Daily.png")} style={styles.routeImage}></Image>
                     </TouchableOpacity>
                 </ImageBackground>
             </View>
@@ -57,16 +57,17 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: 'cover',
     },
-    routeCard: {
-        flex: 0.12,
+   routeCard: {
+        flex: 0.08,
         justifyContent: "center",
         alignItems: "center",
-     
+     width:200,
+     height:20,
         margin: 10,
         marginLeft: 60,
         marginRight: 30,
         borderRadius: 100,
-        backgroundColor: "black"
+        backgroundColor: "#D11583"
     },
     titleBar: {
         flex: 0.5,
@@ -74,23 +75,23 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     titleText: {
-        fontSize: 30,
+        fontSize: 40,
         fontWeight: "bold",
-        color: ""
+        color: "white"
     },
     routeText: {
-        fontSize: 25,
+        fontSize: 18,
         fontWeight: "bold",
-        color: '#D11583',
+        color: 'white',
         justifyContent: "center",
         alignItems: "center"
     },
-    routeImage: {
+   routeImage: {
         position: "absolute",
-        top: -20,
-        right: -15,
-        height: 60,
-        width: 60,
+        top: -50,
+        right: -35,
+        height: 100,
+        width: 100,
         resizeMode: "contain"
     }
 });

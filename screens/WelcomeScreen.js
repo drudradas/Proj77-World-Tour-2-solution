@@ -20,7 +20,7 @@ export default class WelcomeScreen extends Component {
                 <SafeAreaView style={styles.droidSafeArea} />
                 <ImageBackground source={require('../assets/Sky.gif')} style={styles.backgroundImage}>
                     <View style={styles.titleBar}>
-                        <Image source={require("../assets/travelicon.jpg")} style={{ width: 150, height: 150 }}></Image>
+                   
                         <Text style={styles.titleText}>World Tour</Text>
                         <Text style={styles.titleText}>App</Text>
                     </View>
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
      width:200,
      height:20,
         margin: 10,
-        marginLeft: 60,
+        marginLeft: 90,
         marginRight: 30,
         borderRadius: 100,
         backgroundColor: "#D11583"
